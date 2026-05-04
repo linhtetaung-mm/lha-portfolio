@@ -1,4 +1,10 @@
-import GreensAndReds from '@/components/puzzles/GreensAndReds/GreensAndReds';
+import GreensAndReds from './greens-and-reds/GreensAndReds';
+import CrackCode from './crack-code/CrackCode';
+import CodeSolver from './crack-code/CodeSolver';
+import AdvancedSolver from './crack-code/AdvanceCodeSolver';
+import FlowGame from './flow/FlowGame';
+import FlowEditor from './flow/FlowEditor';
+import App from './flow/App';
 
 export default function PuzzlesPage() {
   return (
@@ -21,6 +27,31 @@ export default function PuzzlesPage() {
         <GreensAndReds />
         
       </div>
+      <div className="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+        
+        {/* We "plug in" the game cartridge right here */}
+        <CrackCode />
+        
+      </div>
+      <div className="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+        
+        {/* We "plug in" the game cartridge right here */}
+        <AdvancedSolver />
+        
+      </div>
+      <div className="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+        
+        {/* We "plug in" the game cartridge right here */}
+        {/* <FlowGame /> */}
+        
+      </div>
+      <div className="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+        
+        {/* We "plug in" the game cartridge right here */}
+        <App />
+        
+      </div>
+
       
     </div>
   );

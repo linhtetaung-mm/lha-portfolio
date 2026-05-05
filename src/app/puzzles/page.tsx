@@ -45,7 +45,7 @@ export default function PuzzlesPage() {
         {/* <FlowGame /> */}
         
       </div>
-      <div className="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+      <div className=" mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
         
         {/* We "plug in" the game cartridge right here */}
         <App />

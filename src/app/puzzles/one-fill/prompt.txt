@@ -1,0 +1,286 @@
+You are an expert algorithms engineer and procedural puzzle-generation specialist.
+
+I want you to design and implement a PROFESSIONAL-GRADE One Fill puzzle system in Python.
+
+The puzzle rules are:
+
+- The player must visit every OPEN cell exactly once
+- Movement is only allowed in 4 directions:
+  up/down/left/right
+- BLOCKED cells cannot be visited
+- The player starts at START
+- The puzzle is solved when all OPEN cells are visited exactly once and the path ends at END
+
+This is a Hamiltonian path puzzle on a grid graph.
+
+===========================================================
+IMPORTANT REQUIREMENTS
+===========================================================
+
+The implementation MUST generate REAL commercial-quality puzzles.
+
+DO NOT create:
+- clustered blocked cells
+- giant blob-shaped open regions
+- trivial paths
+- random disconnected carving
+
+I want authentic puzzle generation similar to modern mobile puzzle games.
+
+===========================================================
+GENERATOR REQUIREMENTS
+===========================================================
+
+Implement a FAST procedural puzzle generator with these properties:
+
+1. Explicit START and END cells
+
+2. Randomly distributed blocked cells across the board
+
+3. Organic-looking puzzle layouts
+
+4. Guaranteed solvability
+
+5. Ideally unique solution
+
+6. Scalable to:
+   - 6x6
+   - 8x8
+   - 10x10
+   - 12x12
+
+7. Adjustable blocked-cell count
+
+8. Adjustable difficulty
+
+===========================================================
+CRITICAL ARCHITECTURE REQUIREMENT
+===========================================================
+
+The generator MUST follow this architecture:
+
+STEP 1:
+Generate the ACTUAL intended Hamiltonian path first
+
+STEP 2:
+Derive the puzzle board from that path
+
+Meaning:
+- path cells = OPEN
+- all other cells = BLOCKED
+
+DO NOT use:
+- naive random blocking
+- random connected-component carving
+- flood-fill carving
+
+Those produce fake-looking puzzles.
+
+===========================================================
+GENERATION STRATEGY
+===========================================================
+
+The generator should use:
+
+- randomized DFS/backtracking
+- Warnsdorff heuristic
+- connectivity pruning
+- parity pruning
+- articulation-point prevention
+- dead-end analysis
+
+The generated path should:
+- wander naturally through the board
+- create distributed blocked cells
+- avoid giant open blobs
+- avoid ugly block clusters
+
+===========================================================
+IMPORTANT VISUAL REQUIREMENTS
+===========================================================
+
+Blocked cells should appear naturally distributed across the board.
+
+The board should visually resemble real puzzle apps.
+
+Avoid:
+- large empty rectangles
+- isolated giant open regions
+- obvious snake patterns
+
+Prefer:
+- corridors
+- turns
+- distributed gaps
+- natural flow
+
+===========================================================
+UNIQUENESS REQUIREMENT
+===========================================================
+
+Implement a solver that:
+
+- counts Hamiltonian solutions
+- stops after finding 2 solutions
+
+The generator should reject puzzles with:
+- 0 solutions
+- multiple solutions
+
+Accept only:
+- exactly 1 solution
+
+===========================================================
+SOLVER REQUIREMENTS
+===========================================================
+
+Implement a FAST Hamiltonian solver using:
+
+- DFS
+- backtracking
+- Warnsdorff heuristic
+- forced-move propagation
+- connectivity pruning
+- parity checks
+- dead-end pruning
+
+The solver must be optimized enough for:
+- repeated generation attempts
+
+===========================================================
+DIFFICULTY SYSTEM
+===========================================================
+
+Implement puzzle difficulty estimation based on:
+
+- solver backtrack count
+- branching factor
+- forced moves
+- corridor complexity
+- dead-end traps
+
+Return:
+- EASY
+- MEDIUM
+- HARD
+- EXPERT
+
+===========================================================
+PERFORMANCE REQUIREMENTS
+===========================================================
+
+The implementation should be optimized for speed.
+
+Use:
+- bitmasks if beneficial
+- iterative DFS where possible
+- cached degree calculations
+- local pruning instead of full BFS when possible
+
+The generator should produce puzzles in under:
+- 1 second for 8x8
+- a few seconds for 10x10
+
+===========================================================
+OUTPUT FORMAT
+===========================================================
+
+Represent the board as:
+
+-1 = BLOCKED
+ 0 = OPEN
+
+Also return:
+- START position
+- END position
+- solution path
+
+===========================================================
+PRINTING
+===========================================================
+
+Include:
+- pretty console printing
+- example usage
+- sample generated puzzle
+
+===========================================================
+CODE QUALITY
+===========================================================
+
+Write:
+- complete code
+- production-quality structure
+- heavily commented
+- modular architecture
+- no pseudo-code
+
+I want FULL WORKING IMPLEMENTATION.
+
+===========================================================
+BONUS FEATURES
+===========================================================
+
+If possible also include:
+
+1. Symmetry options
+2. Aesthetic scoring
+3. Puzzle entropy scoring
+4. Replay verification
+5. Hint system
+6. Puzzle serialization
+7. Seeded generation
+8. Parallel generation
+
+===========================================================
+MOST IMPORTANT
+===========================================================
+
+DO NOT create fake generators that merely:
+- remove random cells
+- preserve connectivity only
+
+The generator MUST create the intended Hamiltonian path FIRST.
+
+The final puzzle must look like a real commercial One Fill puzzle.
+
+
+
+########################Improvement###########################
+
+Your previous implementation still creates clustered blocked cells and fake-looking boards.
+
+Improve the generator so that:
+
+- blocked cells are evenly distributed spatially
+- the generated path creates organic puzzle shapes
+- visual aesthetics are considered
+- large open blobs are penalized
+- ugly patterns are rejected
+
+Add:
+- heatmap-based obstacle balancing
+- local shape scoring
+- corridor scoring
+- entropy scoring
+- visual rejection heuristics
+
+The puzzle should visually resemble high-quality mobile puzzle games.
+
+########################maximum-performance solver generation###########################
+
+Rewrite the solver using bitboards/bitmasks for maximum speed.
+
+Optimize for:
+- repeated Hamiltonian searches
+- uniqueness verification
+- large puzzle generation batches
+
+Use:
+- integer bit operations
+- iterative DFS
+- transposition caching
+- Zobrist hashing
+- local connectivity heuristics
+
+The implementation should be industrial-grade.

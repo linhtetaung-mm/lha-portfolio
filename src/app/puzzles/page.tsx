@@ -5,6 +5,8 @@ import AdvancedSolver from './crack-code/AdvanceCodeSolver';
 import FlowGame from './flow/FlowGame';
 import FlowEditor from './flow/FlowEditor';
 import App from './flow/App';
+import OneFillPuzzle from './one-fill/OneFillPuzzle';
+import OneFillPuzzle2 from './one-fill/OneFillPuzzle2';
 
 export default function PuzzlesPage() {
   return (
@@ -49,6 +51,12 @@ export default function PuzzlesPage() {
         
         {/* We "plug in" the game cartridge right here */}
         <App />
+        
+      </div>
+      <div className=" mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
+        
+        {/* We "plug in" the game cartridge right here */}
+        <OneFillPuzzle2 />
         
       </div>
 
